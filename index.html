@@ -81,39 +81,44 @@
         <p class="texty-body">Flexible boxes, or flexbox, is a new layout mode in CSS3. Automated and responsive layout methods.</p>
       </div>
 
+
     </div>
 
   </div>
+  <div class="col-md-12">
+    <br>
+    <p class="blurb">Check out some responsive designs below.</p>
 
-
-
-  </section>
-
-
-  <section id="slideshow" class="container-fluid">
-
-
-
-<div class="row-fluid">
-
-      <a class="back-button" onclick="plusDivs(-1)">&#10094;</a>
-      <a class="forward-button" onclick="plusDivs(1)">&#10095;</a>
-
-      <div class="slides" href="#"><img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiB6JbQ7Y_WAhVC4yYKHYpYD2QQjBwIBA&url=http%3A%2F%2Fcs.wellesley.edu%2F~cs110%2Flectures%2FResponsiveWebDesign%2Fspigot.png&psig=AFQjCNHBM0u5AEDMgFDioWsVyfFtXBRoSQ&ust=1504763119622267" alt=""></div>
-      <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiB6JbQ7Y_WAhVC4yYKHYpYD2QQjBwIBA&url=http%3A%2F%2Fcs.wellesley.edu%2F~cs110%2Flectures%2FResponsiveWebDesign%2Fspigot.png&psig=AFQjCNHBM0u5AEDMgFDioWsVyfFtXBRoSQ&ust=1504763119622267" alt="">
-      <div class="slides" href="#"></div>
-      <div class="slides" href="#"></div>
-      <div class="slides" href="#"></div>
-      <div class="slides" href="#"></div>
-
-
-
-
-    </div>
-
-
+  </div>
 
 </section>
+
+<div id="slideshow" >
+
+
+<div class="row-fluid ">
+
+<div class="btnposition col-md-4 col-md-offset-4">
+<button class="back-button" onclick="plusDivs(-1)">&#10094;</button>
+<button class="forward-button" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<div class="">
+  <a target="_blank" href="https://www.awwwards.com/sites/120g"><img class="mySlides" src="https://assets.awwwards.com/awards/media/cache/thumb_417_299/submissions/2017/08/598b20be402ff_static.jpeg" ></a>
+</div>
+<div class="">
+  <a target="_blank" href="https://www.awwwards.com/sites/dreamhost-remixer"><img class="mySlides" src="https://assets.awwwards.com/awards/media/cache/thumb_417_299/submissions/2017/08/599ddd3543906.jpg" ></a>
+</div>
+<div class="">
+  <a target="_blank" href="https://www.awwwards.com/sites/igx-international-gaming-expo"><img class="mySlides" src="https://assets.awwwards.com/awards/media/cache/thumb_417_299/submissions/2017/08/599e49a515b61.jpg" ></a>
+</div>
+<div class="">
+  <a target="_blank" href="https://www.awwwards.com/sites/apploud-agency-microsite"><img class="mySlides" src="https://assets.awwwards.com/awards/media/cache/thumb_417_299/submissions/2017/08/5996ef0cea6bb.png" ></a>
+</div>
+</div>
+
+</div>
+
 
 
 
@@ -181,8 +186,8 @@
 
     function showDivs(n){
       var i;
-      var x= document.getElementsbyClassName("slides");
-      if(n>x.length) {slideIndex=1}
+      var x= document.getElementsByClassName("mySlides");
+      if(n>x.length) {slideIndex=1};
       if(n<1){slideIndex = x.length}
       for(i=0;i<x.length;i++) {
       x[i].style.display = "none";
