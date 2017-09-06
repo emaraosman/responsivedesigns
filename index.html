@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Design Techniques</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <header id="home-section" class="container">
+
+
+
+        <div class="header-wrap">
+          <nav class="col-md-4 col-md-offset-8 col-xs-12 primary-nav">
+            <ul>
+              <li><a href="#home-section">Home</a></li>
+              <li><a href="bootstrappage.html">Bootstrap</a></li>
+              <li><a href="#contact-section">Flexbox</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      <div class="row">
+        <h1 class="col-md-12 col-xs-12 responsive_headline_c"><span class="border">R<span class="upperlowercase responsive_headline">esponsive</span> D<span class="upperlowercase responsive_headline">esign</span><br> T<span class="upperlowercase responsive_headline">echniques</span></span></h1>
+      </div>
+      <div class="row">
+        <p class="col-md-12 col-xs-12 kicker">Towards understanding responsive design</p>
+      </div>
+
+  </header>
+
+  <div class="header-background">
+  </div>
+
+  <section id="home-content" class="container-fluid">
+    <div class="row">
+      <h3 class="col-md-4 col-md-offset-4 col-xs-8 section-title">Get Started</h3>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3 ">
+        <p class="blurb">Choosing a framework is like picking a tie, choose what fits you best</p>
+      </div>
+
+
+
+<div class="container-fluid">
+
+<div class="row">
+
+
+      <div class="col-md-6 col-sm-12">
+        <div class="bootstrap-button clicky">Bootstrap</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="flexbox-button clicky">Flexbox</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+    </div>
+    
+  </div>
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="jquery.fittext.js"></script>
+
+  <script type="text/javascript">
+    (function($) {
+
+      $.fn.fitText = function(kompressor, options) {
+
+        // Setup options
+        var compressor = kompressor || 1,
+          settings = $.extend({
+            'minFontSize': Number.NEGATIVE_INFINITY,
+            'maxFontSize': Number.POSITIVE_INFINITY
+          }, options);
+
+        return this.each(function() {
+
+          // Store the object
+          var $this = $(this);
+
+          // Resizer() resizes items based on the object width divided by the compressor * 10
+          var resizer = function() {
+            $this.css('font-size', Math.max(Math.min($this.width() / (compressor * 10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+          };
+
+          // Call once to set.
+          resizer();
+
+          // Call on resize. Opera debounces their resize by default.
+          $(window).on('resize.fittext orientationchange.fittext', resizer);
+
+        });
+
+      };
+
+    })(jQuery);
+
+    jQuery(".responsive_headline").fitText(0.8, {
+      minFontSize: '30px',
+      maxFontSize: '60px'
+    });
+    jQuery(".responsive_headline_c").fitText(1.7, {
+      minFontSize: '40px',
+      maxFontSize: '60px'
+    });
+  </script>
+          <script src="bootstrap/bootstrap-2.3.1.min.js"></script>
+</body>
+
+</html>
