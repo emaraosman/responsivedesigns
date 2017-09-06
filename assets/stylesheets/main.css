@@ -64,7 +64,7 @@ HEADER
 ================================
 */
 html{
-
+	width: 100%;
 }
 
 body {
@@ -164,7 +164,6 @@ h1 {
   margin-top:20px;
 }
 
-
 .kicker {
   text-align: center;
   color: rgba(235,240,255,1);
@@ -259,8 +258,13 @@ span{
 	font-size:23px;
 }
 
+.slides{
+	height: auto;
+	width: auto;
+}
 
-
-
-
+img{
+	height: 300px;
+	width: 400px;
+}
 /**/
